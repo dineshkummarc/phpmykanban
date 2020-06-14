@@ -51,6 +51,11 @@ ul {
   text-transform: uppercase;
   font-weight: 600;
 }
+.drag-column-todo .drag-column-header,
+.drag-column-todo .is-moved,
+.drag-column-todo .drag-options {
+  background: #00CCFF;
+}
 .drag-column-on-hold .drag-column-header,
 .drag-column-on-hold .is-moved,
 .drag-column-on-hold .drag-options {
@@ -70,6 +75,18 @@ ul {
 .drag-column-approved .is-moved,
 .drag-column-approved .drag-options {
   background: #00B961;
+}
+
+.drag-column-done .drag-column-header,
+.drag-column-done .is-moved,
+.drag-column-done .drag-options {
+  background: #A52A2A;
+}
+
+.drag-column-completed .drag-column-header,
+.drag-column-completed .is-moved,
+.drag-column-completed .drag-options {
+  background: #F5DEB3;
 }
 
 .drag-column-header {

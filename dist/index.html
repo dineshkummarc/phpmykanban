@@ -2,17 +2,15 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Kanban Drag and Drop</title>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
 </head>
 <body>
 
 <div class="drag-container">
 	<ul class="drag-list">
-	<li class="drag-column drag-column-on-hold">
+	<li class="drag-column drag-column-todo">
 			<span class="drag-column-header">
 				<h2>Todo</h2>
 				<svg class="drag-header-more" data-target="options1" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
@@ -27,24 +25,24 @@
 		</li>
 		<li class="drag-column drag-column-on-hold">
 			<span class="drag-column-header">
-				<h2>On Hold</h2>
-				<svg class="drag-header-more" data-target="options1" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
+				<h2>OnHold</h2>
+				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
 			</span>
 				
-			<div class="drag-options" id="options1"></div>
+			<div class="drag-options" id="options2"></div>
 			
-			<ul class="drag-inner-list" id="1">
+			<ul class="drag-inner-list" id="2">
 				<li class="drag-item"></li>
 				<li class="drag-item"></li>
 			</ul>
 		</li>
 		<li class="drag-column drag-column-in-progress">
 			<span class="drag-column-header">
-				<h2>In Progress</h2>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
+				<h2>InProgress</h2>
+				<svg class="drag-header-more" data-target="options3" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
 			</span>
-			<div class="drag-options" id="options2"></div>
-			<ul class="drag-inner-list" id="2">
+			<div class="drag-options" id="options3"></div>
+			<ul class="drag-inner-list" id="3">
 				<li class="drag-item"></li>
 				<li class="drag-item"></li>
 				<li class="drag-item"></li>
@@ -52,11 +50,11 @@
 		</li>
 		<li class="drag-column drag-column-needs-review">
 			<span class="drag-column-header">
-				<h2>Needs Review</h2>
-				<svg data-target="options3" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
+				<h2>NeedReview</h2>
+				<svg data-target="options4" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
 			</span>
-			<div class="drag-options" id="options3"></div>
-			<ul class="drag-inner-list" id="3">
+			<div class="drag-options" id="options4"></div>
+			<ul class="drag-inner-list" id="4">
 				<li class="drag-item"></li>
 				<li class="drag-item"></li>
 				<li class="drag-item"></li>
@@ -66,32 +64,32 @@
 		<li class="drag-column drag-column-approved">
 			<span class="drag-column-header">
 				<h2>Approved</h2>
-				<svg data-target="options4" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
+				<svg data-target="options5" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
 			</span>
-			<div class="drag-options" id="options4"></div>
-			<ul class="drag-inner-list" id="4">
+			<div class="drag-options" id="options5"></div>
+			<ul class="drag-inner-list" id="5">
 				<li class="drag-item"></li>
 				<li class="drag-item"></li>
 			</ul>
 		</li>
-		<li class="drag-column drag-column-approved">
+		<li class="drag-column drag-column-done">
 			<span class="drag-column-header">
 				<h2>Done</h2>
-				<svg data-target="options4" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
+				<svg data-target="options6" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
 			</span>
-			<div class="drag-options" id="options4"></div>
-			<ul class="drag-inner-list" id="4">
+			<div class="drag-options" id="options6"></div>
+			<ul class="drag-inner-list" id="6">
 				<li class="drag-item"></li>
 				<li class="drag-item"></li>
 			</ul>
 		</li>
-		<li class="drag-column drag-column-approved">
+		<li class="drag-column drag-column-completed">
 			<span class="drag-column-header">
 				<h2>Completed</h2>
-				<svg data-target="options4" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
+				<svg data-target="options7" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
 			</span>
-			<div class="drag-options" id="options4"></div>
-			<ul class="drag-inner-list" id="4">
+			<div class="drag-options" id="options7"></div>
+			<ul class="drag-inner-list" id="7">
 				<li class="drag-item"></li>
 				<li class="drag-item"></li>
 			</ul>
